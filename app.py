@@ -3,7 +3,7 @@ import random
 from models.messages.message import *
 
 app = Flask(__name__)
-app.config.from_object('src.config')
+app.config.from_object('config')
 app.secret_key = ''
 
 
@@ -14,7 +14,6 @@ def init_db():
     for i in range(100):
         random_int.append(random.randint(1, 10000))
     app.secret_key = ''.join(str(random_int))
-
 
 @app.route('/')
 def home():
