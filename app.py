@@ -40,9 +40,9 @@ def loading():
     return render_template('loading.html')
 
 
-from src.models.users.views import user_blueprint
-from src.models.notes.views import note_blueprint
-from src.models.messages.views import message_blueprint
+from models.users.views import user_blueprint
+from models.notes.views import note_blueprint
+from models.messages.views import message_blueprint
 
 app.register_blueprint(user_blueprint, url_prefix="/users")
 app.register_blueprint(note_blueprint, url_prefix="/notes")
